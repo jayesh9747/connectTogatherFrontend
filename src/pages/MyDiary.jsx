@@ -23,7 +23,8 @@ const MyDiary = () => {
 
   const fetchHomework = async ( grade,date) => {
       try {
-          const response = await fetch('http://localhost:4000/api/v1/other/homework', {
+        
+          const response = await fetch(`${process.env.REACT_APP_BASE_URL}/other/homework`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',

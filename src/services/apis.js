@@ -1,4 +1,6 @@
-const BASE_URL ="http://localhost:4000/api/v1"
+const BASE_URL =`${process.env.REACT_APP_BASE_URL}`
+
+
 
 /*
  apis is used to connect backend and frontend 

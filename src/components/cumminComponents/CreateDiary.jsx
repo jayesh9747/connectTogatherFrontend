@@ -6,7 +6,8 @@ const CreateDiary = () => {
 
     const fetchSubjects = async () => {
         try {
-            const response = await fetch("http://localhost:4000/api/v1/other/getallsubject", {
+            
+            const response = await fetch(`${REACT_APP_BASE_URL}/other/createhomework/other/getallsubject`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',

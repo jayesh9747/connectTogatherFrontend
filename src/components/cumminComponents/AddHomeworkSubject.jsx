@@ -18,7 +18,8 @@ const AddHomeworkSubject = () => {
         const formattedDate = day + '-' + month + '-' + year;
 
         try {
-            const response = await fetch('http://localhost:4000/api/v1/other/createhomework', {
+            process.env.REACT_APP_BASE_URL
+            const response = await fetch(`${REACT_APP_BASE_URL}/other/createhomework`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -58,7 +58,7 @@ const imageUploadHandle=async(e)=>{
       formData.append("message",sendMessage);
       formData.append("replyingmsg",replyingmsg);
       formData.append("image",file);
-      const response = await fetch(`${url}upload`, {
+      const response = await fetch(`${url}/upload`, {
             method: "POST",
             body: formData
             });

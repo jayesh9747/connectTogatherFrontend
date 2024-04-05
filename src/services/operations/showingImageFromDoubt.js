@@ -2,7 +2,8 @@ import toast from "react-hot-toast";
 
 export async function gettingDoubtImage(id,setDoubtDetails){
        try{
-        const response=await fetch(`http://localhost:4000/api/v1/doubt/getUserDoubt`,{
+        
+        const response=await fetch(`${process.env.REACT_APP_BASE_URL}/doubt/getUserDoubt`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

@@ -11,7 +11,8 @@ function AppContextProvider({children}) {
   const {user}=useSelector((state)=>state.profile)
 //   const url=process.env.REACT_APP_BACKEND_URL||"http://localhost:4000/";
 const [currentDoubt,setCurrentDoubt]=useState()
-  const url="http://localhost:4000/";
+
+  const url=`${process.env.REACT_APP_BACKEND_URL}`;
 
       const socket=useMemo(()=>io(url),[]);
       // useMemo(()=>{socket.emit("join-room",user._id);
